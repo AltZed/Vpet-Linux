@@ -1,0 +1,44 @@
+{
+  // Python: путь к интерпретатору (можно оставить авто или указать явно)
+  "python.defaultInterpreterPath": "./venv/bin/python",
+  
+  // Автоматическое форматирование при сохранении
+  "editor.formatOnSave": true,
+
+  // Форматтер по умолчанию — Black
+  "python.formatting.provider": "black",
+
+  // Параметры Black (если хочешь кастомизировать)
+  "python.formatting.blackArgs": [
+    "--line-length=88"
+  ],
+
+  // Сортировка импортов с isort при сохранении
+  "isort.check": true,
+  "isort.showNotifications": true,
+  "python.sortImports.args": [
+    "--profile", "black"
+  ],
+
+  // Линтер — можно выбрать flake8 или pylint
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+
+  // Автодополнение и анализ кода
+  "python.analysis.typeCheckingMode": "off",
+  "python.analysis.autoSearchPaths": true,
+
+  // Умные импорты и рефакторинг
+  "python.autoComplete.addBrackets": true,
+  "python.analysis.completeFunctionParens": true,
+
+  // Убираем лишние пробелы при сохранении
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+
+  // Отключаем форматирование для других языков (если нужно)
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  }
+}
